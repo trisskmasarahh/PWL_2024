@@ -16,3 +16,21 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/hello', function () {
+    return 'Hello World';
+});
+
+Route::get('/world', function () {
+    return 'World';
+});
+
+Route::get('/', function () {
+    return 'SELAMAT DATANG';
+});
+
+Route::get('/about', function () {
+    return 'Nama : Tri Sukma Sarah <br>
+    Nim : 2341720051';
+});
