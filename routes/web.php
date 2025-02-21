@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\WelcomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -63,4 +63,8 @@ Route::get(	'/user/{name?}', function ($name='John') {
 Route::get('/user/profile', function() { 
     //
     })->name('profile'); 
+   
+    
+    Route::get('/hello', [WelcomeController::class,'hello']); 
+
     
