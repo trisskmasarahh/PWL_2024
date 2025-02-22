@@ -93,3 +93,17 @@ Route::resource('photos', PhotoController::class);
  Route::resource('photos', PhotoController::class)->except([
      'create', 'store', 'update', 'destroy'
  ]);
+
+ route::get('/greeting', function(){
+    return view('hello', ['name' => 'Sarah']);
+ });
+
+ //dilakukan perubahan
+
+//  Route::get('/greeting', function () {  	
+//     return view('blog.hello', ['name' => 'Sarah']); 
+// }); 
+//mengubah root geetring dan mengarahkan ke welcomeControlller
+Route::get('/greeting', [WelcomeController::class, 
+'greeting'
+]); 
